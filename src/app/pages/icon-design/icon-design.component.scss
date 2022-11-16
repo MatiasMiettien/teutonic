@@ -1,0 +1,129 @@
+@import '../../../Global-styles/styles.scss';
+@import '../../../Global-styles/colors.scss';
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page {
+  height: 100%;
+  width: $common-page-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .header {
+    color: $light-color;
+    font-size: $font-header-size;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .common-text {
+    font-family: $font-family;
+    color: $light-color;
+    letter-spacing: $letter-small-spacing;
+    font-size: $font-size;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+
+  .hr {
+    border: none;
+    background-color: $secondary-color;
+    width: 100%;
+    height: 2px;
+  }
+
+  .ecommon-text {
+    font-family: $font-family;
+    color: $light-color;
+    letter-spacing: $letter-small-spacing;
+    font-size: $font-size;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .send-idea {
+    width: 300px;
+    height: 50px;
+    color: $main-light-color;
+    background-color: $secondary-color;
+    border: none;
+    transition: all 100ms ease-in;
+    margin-bottom: 50px;
+    font-family: $font-family;
+    font-size: $font-header-size;
+    letter-spacing: $letter-spacing;
+    border-radius: 3px;
+
+    &:hover{
+      box-shadow: 0 5px 5px black;
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: 0 2px 4px black;
+      transform: translateY(-1px);
+    }
+  }
+
+  .confirming {
+    width: 50%;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+      display: flex;
+      margin-bottom: 20px;
+      width: 100%;
+
+      .aihe {
+        height: 20px;
+        width: 100%;
+        border: 1px solid $secondary-color;
+        background-color: $main-dark-color;
+        padding: 0px;
+        border-right: 0px;
+        outline: none;
+        color: $main-light-color;
+        font-family: $font-family;
+        font-size: $font-size;
+      }
+      .x {
+        width: 20px;
+        height: 22px;
+        background-color: $main-dark-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+        border-right: 1px solid $secondary-color;
+        border-left: 0px;
+        border-top: 1px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;
+      }
+    }
+
+    .textarea {
+      resize: none;
+      width: calc(100% - 5px);
+      height: 50px;
+      @include scrollbar();
+      background-color: $main-dark-color;
+      border: 1px solid $secondary-color;
+      outline: none;
+      color: $main-light-color;
+      font-family: $font-family;
+      font-size: $font-size;
+      margin-bottom: 20px;
+    }
+  }
+}

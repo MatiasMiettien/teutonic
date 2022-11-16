@@ -1,0 +1,84 @@
+@import '../../../Global-styles/styles.scss';
+@import '../../../Global-styles/colors.scss';
+
+:host {
+  width: 100%;
+}
+
+.card-left {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .block {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // box-shadow: $box-shadow;
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 50px 100%, 0 120px);
+    transition: all 100ms ease-in-out;
+
+    .bar {
+      height: 100%;
+      width: 2px;
+      background-color: $secondary-color;
+    }
+    .image-slot {
+      height: 100%;
+      width: 200px;
+      background-color: $main-dark-color;
+    }
+    .text-backround {
+      //background-color: $main-dark-color;
+      background-image: $background-image;
+      border: 1px solid $main-dark-color;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      // clip-path: polygon(0 0, 100% 0, 100% 80%, 95% 100%, 0 100%);
+      transition: all 500ms ease-in-out;
+
+      .text {
+        margin: 0px;
+        padding: 10px 10px 10px 10px;
+        color: $light-color;
+        font-family: $font-family;
+        font-size: $font-size;
+        letter-spacing: $letter-small-spacing;
+        width: calc(100% - 20px);
+        height: calc(60% - 10px);
+      }
+
+      .hr {
+        height: 2px;
+        width: 100%;
+        background-color: $secondary-color;
+      }
+
+      .enter-to {
+        height: calc(40% - 2px);
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        font-family: $font-family;
+        color: $light-color;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          color: $main-light-color;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: $box-shadow;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../../Global-styles/colors';
+@import '../../../Global-styles/styles';
+
+hr {
+  width: 80%;
+  border: none;
+  height: 1px;
+  background-color: $main-light-color;
+}
+
+.ornament {
+  background-image: linear-gradient(
+      to bottom,
+      $secondary-color,
+      $main-light-color),
+      url(../../../assets/Edge.png);
+  width: 100%;
+  height: 20px;
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.footer-element {
+  background-color: $main-dark-color;
+  width: 100%;
+  height: 300px;
+  border-top: 2px solid $secondary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: $box-shadow;
+  background-image: $background-image;
+
+  .upper-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $main-light-color;
+    font-family: $font-family;
+  }
+  .middle {
+    .heading {
+      color: $main-light-color;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    .row {
+      font-size: 15px;
+      color: $main-light-color;
+      margin-left: 20px;
+    }
+  }
+  .lower-section {
+    width: 100%;
+    text-align: center;
+    color: $main-light-color;
+    margin-bottom: 10px;
+    font-family: Chandas;
+    font-size: 12px;
+
+    .text {
+      margin: 0px;
+    }
+  }
+}

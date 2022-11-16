@@ -1,0 +1,35 @@
+@import '../../../Global-styles/styles.scss';
+@import '../../../Global-styles/colors.scss';
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page {
+  height: 100%;
+  width: $common-page-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .header {
+    color: $light-color;
+    font-size: $font-header-size;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .common-text {
+    font-family: $font-family;
+    color: $light-color;
+    letter-spacing: $letter-small-spacing;
+    font-size: $font-size;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+}

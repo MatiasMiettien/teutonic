@@ -1,0 +1,62 @@
+<div class="page">
+  <div class="header">Ikonit ja Logot</div>
+  <div class="common-text">
+    Kun tilaat Teutonilta logon sinun ei tarvitse vielä maksaa mitään, pitää vain yksinkertaisesti
+    syöttää yhtiösi nimi ja jonkinlainen selvitys aiheesta tai mielipiteestäsi
+    ja painaa nappia 'Submit' ja voit alkaa seuraamaan ikonisi valmistumista.
+    Teuton valmistaa logon viidessä eri vaiheessa:
+  </div>
+  <hr class="hr">
+  <div class="ecommon-text">
+    1 suunnittelu:
+  </div>
+  <hr class="hr">
+  <div class="ecommon-text">
+    2 toteutus:
+  </div>
+  <hr class="hr">
+  <div class="ecommon-text">
+    3 eri väriyhdistelmien sommittelu:
+  </div>
+  <hr class="hr">
+  <div class="ecommon-text">
+    4 ikonisettien paketointi:
+  </div>
+  <hr class="hr">
+  <div class="ecommon-text">
+    5 zip-muotoisen paketin lähettäminen tilaajalle:
+  </div>
+  <hr class="hr">
+  <div class="common-text"></div>
+  <div class="common-text">
+    Jos sinulla on tarvetta logolle, mutta et osaa tai ehdi tehdä sitä, ole huoletta,
+    tee logotilaus Teutonille saat logosi yhtä varmasti kuin että Teuton pystyy tekemään sen.
+  </div>
+  <button *ngIf="!sending" (click)="sending = true" class="send-idea">Lähetä pyyntö</button>
+  <div *ngIf="sending" class="confirming">
+    <hr class="hr">
+    <div class="ecommon-text">Kirjoita tähän yhtiösi nimi</div>
+    <div class="input">
+      <input [(ngModel)]="companyName" spellcheck="false" class="aihe" type="text">
+      <button (click)="companyName = ''" class="x"><img src="assets/x.svg" alt=""></button>
+    </div>
+    <div class="ecommon-text">
+      Syötä tähän erityistoivomuksesi
+    </div>
+    <textarea class="textarea" spellcheck="false"></textarea>
+    <div class="ecommon-text">
+      Kirjoita Sähköpostisi allaolevaan kenttään jotta Teuton voi lähettää valmiin zip-paketin oikeaan osoitteeseen
+    </div>
+    <div class="input">
+      <input [(ngModel)]="email" spellcheck="false" class="aihe" type="text">
+      <button (click)="companyName = ''" class="x"><img src="assets/x.svg" alt=""></button>
+    </div>
+    <div class="ecommon-text">Nyt voit painaa nappia lähetä ja siirtyä seuraamaan logosi kehitystä!</div>
+    <button class="send-idea">Lähetä</button>
+    <hr class="hr">
+  </div>
+  <div class="common-text">
+    Työn alla olevia logoja nimineen. Jos ole itse lähettänyt logopyynnön, näet sen allaolevassa listassa.
+    jokaisessa logossa näkyy myös sen edistyminen yllämainitun kaavan mukaisesti.
+  </div>
+</div>

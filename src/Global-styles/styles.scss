@@ -1,0 +1,54 @@
+@import './colors.scss';
+
+$common-page-width: 80%;
+$font-header-size: xx-large;
+$font-size: 15px;
+$letter-spacing: 3px;
+$letter-small-spacing: 1px;
+$font-family: sans;
+$box-shadow: 0 0 5px black;
+
+@font-face {
+  font-family: carolingia;
+  src: url('../assets/carolingia.ttf');
+}
+
+$background-image: linear-gradient(to right bottom, $main-dark-color, $dark-color);
+
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 100%;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $main-dark-color;
+  }
+}
+
+@mixin page-scrollbar() {
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 100%;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $main-dark-color;
+  }
+}
